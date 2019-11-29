@@ -1,0 +1,26 @@
+{
+  "name": "env-cli-editor",
+  "version": "1.0.0",
+  "description": ".env editor from command line",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/cendekia/env-cli-editor.git"
+  },
+  "keywords": [
+    ".env",
+    "dotenv",
+    "cli",
+    "editor",
+    "command-line"
+  ],
+  "author": "cendekia",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cendekia/env-cli-editor/issues"
+  },
+  "homepage": "https://github.com/cendekia/env-cli-editor#readme"
+}
