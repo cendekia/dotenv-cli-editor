@@ -1,8 +1,11 @@
 {
-  "name": "env-cli-editor",
+  "name": "dotenv-cli-editor",
   "version": "1.0.0",
   "description": ".env editor from command line",
   "main": "index.js",
+  "bin": {
+    "dotenv-cli": "./index.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -22,5 +25,9 @@
   "bugs": {
     "url": "https://github.com/cendekia/env-cli-editor/issues"
   },
-  "homepage": "https://github.com/cendekia/env-cli-editor#readme"
+  "homepage": "https://github.com/cendekia/env-cli-editor#readme",
+  "dependencies": {
+    "commander": "^4.0.1",
+    "dotenv": "^8.2.0"
+  }
 }
