@@ -24,8 +24,9 @@ $ envi --help
     -h, --help               output usage information
 
   Commands:
-    show [options]           Show specific or all parameters and values of dotenv
+    show [options]           Show specific or all parameters and value at dotenv
     edit [options] <envKey>  Edit specific env parameter value
+    add [options]            Add new parameter to your dotenv
 ```
 
 ## Support

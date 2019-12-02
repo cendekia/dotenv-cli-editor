@@ -28,7 +28,8 @@
   "homepage": "https://github.com/cendekia/env-cli-editor#readme",
   "dependencies": {
     "commander": "^4.0.1",
-    "dotenv": "^8.2.0"
+    "dotenv": "^8.2.0",
+    "inquirer": "^7.0.0"
   },
   "devDependencies": {
     "chai": "^4.2.0",
