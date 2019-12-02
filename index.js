@@ -7,6 +7,26 @@ var defaultDotEnv = '.env';
 program.version(require('./package.json').version);
 
 program
+    .command('show')
+    .option('-k, --key <paramKey>', 'show value of its param key name')
+    .option('-p, --path [envFilePath]', 'dotenv file location path', '.env')
+    .description('Show specific or all parameters and value at dotenv')
+    .action((cmdObj) => {
+        fs.readFile(cmdObj.path, function(err, buf) {
+            if (err) {
+                console.log(err.toString());
+            } else {
+                const config = dotenv.parse(buf);
+                if (cmdObj.key) {
+                    console.log(config[`${cmdObj.key}`]);
+                } else {
+                    console.log(config);
+                }
+            }
+        });
+    });
+
+program
     .command('edit <envKey>')
     .option('-v, --value <newEnvValue>', 'new dotenv param value')
     .option('-p, --path [envFilePath]', 'dotenv file location path', '.env')
@@ -51,9 +71,9 @@ program
         console.log('');
         console.log('Examples:');
         console.log('');
-        console.log('  $ envitor edit APP_NAME -v AwesomeAppName');
-        console.log('  $ envitor edit APP_NAME -v "Awesome App Name" -p ./AwesomeApp/.env');
-        console.log('  $ envitor edit APP_NAME --value "Awesome Application Name" --path ./AwesomeApp/.env');
+        console.log('  $ envi edit APP_NAME -v AwesomeAppName');
+        console.log('  $ envi edit APP_NAME -v "Awesome App Name" -p ./AwesomeApp/.env');
+        console.log('  $ envi edit APP_NAME --value "Awesome Application Name" --path ./AwesomeApp/.env');
     });
 
 program.arguments('<command>').action(command => {
