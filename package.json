@@ -1,10 +1,10 @@
 {
   "name": "dotenv-cli-editor",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": ".env editor from command line",
   "main": "index.js",
   "bin": {
-    "dotenv-cli": "./index.js"
+    "envi": "./index.js"
   },
   "scripts": {
     "test": "mocha"
