@@ -20,10 +20,11 @@ $ envi --help
   Usage:  <command>
 
   Options:
-    -v, --version            output the version number
+    -V, --version            output the version number
     -h, --help               output usage information
 
   Commands:
+    show [options]           Show specific or all parameters and values of dotenv
     edit [options] <envKey>  Edit specific env parameter value
 ```
 
