@@ -52,9 +52,9 @@ program
         console.log('');
         console.log('Examples:');
         console.log('');
-        console.log('  $ edit APP_NAME -v AwesomeAppName');
-        console.log('  $ edit APP_NAME -v "Awesome App Name" -p ./AwesomeApp/.env');
-        console.log('  $ edit APP_NAME -value "Awesome Application Name" -path ./AwesomeApp/.env');
+        console.log('  $ dotenv-cli edit APP_NAME -v AwesomeAppName');
+        console.log('  $ dotenv-cli edit APP_NAME -v "Awesome App Name" -p ./AwesomeApp/.env');
+        console.log('  $ dotenv-cli edit APP_NAME -value "Awesome Application Name" -path ./AwesomeApp/.env');
     });
 
 program.arguments('<command>').action(command => {
