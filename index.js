@@ -51,6 +51,7 @@ program
   .option('-n, --newkey <newEnvKey>', 'new env parameter key')
   .option('-v, --value [newEnvValue]', 'new env value')
   .option('-p, --path [envFilePath]', 'dotenv file location path', '.env')
+  .option('-f, --force', 'force writing')
   .description('Add new parameter to your dotenv')
   .action((cmdObj) => {
     if (typeof cmdObj.newkey == 'undefined') {
@@ -77,6 +78,12 @@ program
           message: `Are you sure will add and save it:`
         }];
     } else {
+      
+      if(cmdObj.force && cmdObj.value) {
+         envi.addEnv(cmdObj);
+         return;
+      }
+      
       var questions = [{
         type: 'confirm',
         name: 'confirmation',
